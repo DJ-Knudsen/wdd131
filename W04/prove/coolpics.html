@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coolpics</title>
     <link href="coolpics.css" rel="stylesheet">
+    <script src="coolpics.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Cool Pics 📷</h1>
-        <button class="menu-btn">
+        <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -36,6 +37,10 @@
             <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg" alt="I think this is Yellowstone? No idea">
         </div>
     </main>
+    <dialog id="image-modal">
+        <button class="close-btn" aria-label="Close image">X</button>
+        <img src="https://wddbyui.github.io/wdd131/images/norris-full.jpg" alt="Bigger image">
+    </dialog>
 <footer>Yoooooooo, fake site</footer>
 </body>
 </html>

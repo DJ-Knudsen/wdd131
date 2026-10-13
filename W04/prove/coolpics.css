@@ -1,9 +1,10 @@
-img {
+.images img {
     object-fit: cover;
     width: 300px;
     height: 300px;
     border: 5px solid white;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
 body {
@@ -18,7 +19,31 @@ footer {
 }
 
 .menu-btn {
-    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-btn div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-btn.open .bar1 { 
+    transform: translateY(9px) rotate(45deg); 
+}
+
+.menu-btn.open .bar2 { 
+    opacity: 0; 
+}
+
+.menu-btn.open .bar3 { 
+    transform: translateY(-9px) rotate(-45deg); 
 }
 
 nav {
@@ -28,6 +53,12 @@ nav {
 nav a {
     color: white;
     padding: 20px;
+}
+
+nav.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
@@ -43,6 +74,24 @@ h2 {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 1.5rem;
+}
+
+dialog {
+    padding: 0;
+    border: none;
+    background: transparent;
+    overflow: visible;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+dialog img {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    border: 5px solid white;
 }
 
 @media screen and (min-width: 700px) {
