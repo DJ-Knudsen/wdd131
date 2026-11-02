@@ -21,8 +21,7 @@ function updateTypeFields() {
 
 function isPastDate(value) {
   const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const chosen = new Date(`${value}T00:00:00`);
+  const chosen = new Date(value);
   return chosen < today;
 }
 
