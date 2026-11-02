@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #bcceda;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 660px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field[hidden] {
+  display: none;
+}
+
+.full {
+  grid-column: 1 / 3;
+}
+
+input,
+select,
+button {
+  padding: 0.6rem;
+  font: inherit;
+}
+
+button {
+  background: #bcceda;
+  transition: background 0.5s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #d5e1e9;
+}
+
+#output {
+  margin-top: 1rem;
+}
